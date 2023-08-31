@@ -4,6 +4,16 @@
     box-sizing: border-box;
 }
 
+.d-flex{
+    display: flex;
+}
+
 body{
-    background-color: rgb(74, 202, 11);
+    background-color: cornflowerblue
+}
+
+main.container{
+    width: 80%;
+    margin: auto;
+    padding: 1rem;
 }

@@ -14,7 +14,8 @@
                 routeName:'projects',
                 name:'Projects'
             },
-        ]
+        ],
+
 
             }
         }
@@ -24,20 +25,36 @@
 
 <template>
 <header>
-    <h1>Titolastrogrande</h1>
+    <h1>Qui manca un titolo..</h1>
     <nav>
-        <ul>
+        <ul class="d-flex">
             <li v-for="element in navElements">
                 <router-link :to=" { name: element.routeName}">
                     {{ element.name }}
                 </router-link>
             </li>
         </ul>
-
     </nav>
 </header>
 </template>
 
 <style lang="scss" scoped >
+h1{
+    text-align: center;
+    color: yellow;
+    padding: 1rem;
+}
 
+ul{
+    justify-content: center;
+    li{
+        list-style-type: none;
+        font-size: 1.5rem;
+        padding: 0 2rem;
+        a{
+            text-decoration: none;
+            color: white;
+        }
+    }
+}
 </style>

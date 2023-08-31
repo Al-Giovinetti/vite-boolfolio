@@ -35,8 +35,8 @@ export default{
 </script>
 
 <template>
-    <main>
-        <div class="container">
+    <main class="container">
+        <div>
             contenutoooooooooooooooooooooooooooooooo
         </div>
     </main>
