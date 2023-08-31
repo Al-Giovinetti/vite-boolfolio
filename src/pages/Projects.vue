@@ -42,6 +42,7 @@ export default{
 <template>
     <main>
         <div class="container d-flex" >
+            
             <Project v-for="project in projectList" :projectInfo="project"/>
         </div>
     </main>

@@ -53,7 +53,8 @@ ul{
         padding: 0 2rem;
         a{
             text-decoration: none;
-            color: white;
+            color: black;
+            font-weight: bolder;
         }
     }
 }

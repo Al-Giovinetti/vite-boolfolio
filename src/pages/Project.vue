@@ -10,8 +10,12 @@ export default{
 
 <template>
     <div class="card" >
-        <h3>{{ projectInfo.title}}</h3>
-        <p>Project for {{ projectInfo.type.name }}</p>
+        <h3>
+            <router-link :to="{name: 'project.show',params:{id : projectInfo.id}}">
+               {{ projectInfo.title}}
+            </router-link>
+        </h3>
+         <p>Project for {{ projectInfo.type.name }}</p>
     </div>
 
 </template>
@@ -35,6 +39,10 @@ export default{
             }
             h3{
                 text-align: center;
+                a{
+                    text-decoration: none;
+                    color: cornflowerblue;
+                }
             }
 
 
