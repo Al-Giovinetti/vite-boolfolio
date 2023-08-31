@@ -1,9 +1,14 @@
 <script>
+import Project from './Project.vue'
 
 import axios from 'axios'
 
 export default{
     name:'Projects',
+
+    components:{
+        Project
+    },
 
     data(){
         return{
@@ -35,20 +40,17 @@ export default{
 </script>
 
 <template>
-    <main class="container">
-        <div>
-            contenutoooooooooooooooooooooooooooooooo
+    <main>
+        <div class="container d-flex" >
+            <Project v-for="project in projectList" :projectInfo="project"/>
         </div>
     </main>
 
 </template>
 
 <style lang="scss" scoped >
-    div.container{
-        width: 80%;
-        margin: auto;
-        display: flex;
-        flex-wrap: wrap;
-    }
+div.container.d-flex{
+    flex-wrap: wrap;
+}
 
 </style>

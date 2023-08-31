@@ -10,7 +10,7 @@ export default{
 
 <template>
     <div class="card" >
-        <h2>{{ projectInfo.title}}</h2>
+        <h3>{{ projectInfo.title}}</h3>
         <p>Project for {{ projectInfo.type.name }}</p>
     </div>
 
@@ -19,11 +19,11 @@ export default{
 <style lang="scss" scoped >
  div.card{
             display: flex;
-            justify-content: space-between;
             flex-direction: column;
+            justify-content: space-between;
             width: calc(100% / 3 - 3rem);
             height: 120px;
-            background-color: yellowgreen;
+            background-color: yellow;
             border:3px solid black;
             border-radius: 10px;
             padding: 1rem;
@@ -32,6 +32,10 @@ export default{
         }
             p{
                 text-align: center;
-                ;}
+            }
+            h3{
+                text-align: center;
+            }
+
 
 </style>
