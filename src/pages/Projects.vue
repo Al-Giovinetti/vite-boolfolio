@@ -1,14 +1,9 @@
 <script>
-import ProjectCard from './ProjectCard.vue'
 
 import axios from 'axios'
 
 export default{
-    name:'AppHeader',
-
-    components:{
-        ProjectCard
-    },
+    name:'Projects',
 
     data(){
         return{
@@ -42,7 +37,7 @@ export default{
 <template>
     <main>
         <div class="container">
-            <ProjectCard v-for="project in projectList" :projectInfo="project"/>
+            contenutoooooooooooooooooooooooooooooooo
         </div>
     </main>
 
