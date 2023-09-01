@@ -1,21 +1,37 @@
 <script>
+import {store} from '../store'
 export default{
     name:"Project",
 
     props:{
         projectInfo:Object
+    },
+
+    data(){
+        return{
+            store,
+            showInfo: false,
+        }
+    },
+
+    methods:{
+        selectProject(info){
+            this.store.projectSelected=info;
+            this.showInfo = !this.showInfo;
+        }
     }
 }
 </script>
 
 <template>
     <div class="card" >
-        <h3>
-            <router-link :to="{name: 'project.show',params:{id : projectInfo.id}}">
-               {{ projectInfo.title}}
-            </router-link>
+        <h3 @click="selectProject(projectInfo)">
+            {{ projectInfo.title}}
         </h3>
          <p>Project for {{ projectInfo.type.name }}</p>
+         <div v-if="showInfo">
+            {{ this.store.projectSelected }}
+         </div>
     </div>
 
 </template>
